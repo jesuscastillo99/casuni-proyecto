@@ -1,0 +1,248 @@
+CREATE DATABASE proyectobd;
+
+use proyectobd;
+CREATE TABLE partes (serie int primary key , marca varchar(6), parte varchar(25), localidad varchar(25), estatus varchar(25));
+
+CREATE TABLE piezas (codigo varchar(20) primary key, descripcion varchar(100), marca varchar(30));
+
+CREATE TABLE piezas2 (codigo varchar(20) primary key, descripcion varchar(100), marca varchar(30));
+
+CREATE TABLE piezas3 (codigo varchar(20) primary key, descripcion varchar(100), marca varchar(30));
+
+CREATE TABLE solicitudes (codigo int not null AUTO_INCREMENT, nombre varchar(50), cantidad int, estatus varchar(30), PRIMARY KEY (codigo));
+
+CREATE TABLE trabajos (serie int primary key, nombre varchar(40), apellido varchar(40), fecha date);
+;
+
+/*PARTES */
+insert into partes values (87678,'DIEBOLD','FUENTE DE ATM','QUERETARO','FINALIZADO');
+
+insert into partes values (87679,'WINCOR','FUENTE DE PODER ATM','QUERETARO','FINALIZADO');
+
+insert into partes values (87681,'DIEBOLD','IMPRESORA EPSON','QUERETARO','FINALIZADO');
+
+insert into partes values (87682,'WINCOR','ESCROW UNIT','QUERETARO','FINALIZADO');
+
+insert into partes values (87683,'WINCOR','MICR READER','QUERETARO','FINALIZADO');
+
+insert into partes values (87684,'WINCOR','MONITOR LCD 12.1 XE','QUERETARO','FINALIZADO');
+
+insert into partes values (87685,'WINCOR','SEPERATOR TRANSPORT','QUERETARO','FINALIZADO');
+
+insert into partes values (87686,'WINCOR','PANEL DE OPERADOR USB','QUERETARO','FINALIZADO');
+
+insert into partes values (87687,'DIEBOLD','PANEL DE OPERADOR','QUERETARO','FINALIZADO');
+
+/* PIEZAS DIEBOLD */
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP01', 'Snap on Wheel Grueso', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP02', 'Snap on Wheel Delgado', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP03', 'Fender', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP04', 'Pivote de take away Wheel', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP05', 'Pivote de Stripper Wheel', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP06', 'Eje take away wheel', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP07', 'Eje stripper wheel', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP08', 'Fork Block', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP09', 'Pin latch plano', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP10', 'Pin latch H', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP11', 'Pin can opening', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP12', 'Base para reporte', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP13', 'Balero para Feed Shaft', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP14', 'Sprint take away', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP15', 'Tornillo de fork block', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP16', 'Tornillo de ajuste single picker', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP17', 'Cable IDE corto de single picker', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP18', 'Cable IDE largo de single picker', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP19', 'Cable alim de motor single picker corto', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP20', 'Cable alim de motor single picker largo', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP21', 'Feed Shaft', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP22', 'Doble Detec', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP23', 'Motor single picker', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP24', 'Guia de billete', 'DIEBOLD');
+
+insert into piezas (codigo, descripcion, marca ) VALUES ('DSP25', 'Cople de motor feed shaft', 'DIEBOLD');
+
+
+/*PIEZAS CCDM */ 
+
+insert into piezas2 VALUES ('WCCDMCHA01', 'Banda Plana Corta', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA02', 'Banda Plana Larga', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA03', 'Banda Plana parte trasera de chasis ccdm', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA04', 'Guia de Billete Chasis CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA05', 'Contra de guia de billete Chasis CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA06', 'Tapa de impresora Chasis CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA07', 'Kit de cable plano(corto y largo)', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA08', 'Cable plano de Dispenser Module corto', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA09', 'Cable plano de Dispenser Module largo', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA10', 'Eje con rodillos para bandas', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA11', 'Eje con 3 gomas (inferior) Chasis CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMCHA12', 'Polea dentada (interna)', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC01', 'Cinta delgada con inicio transparente de Escrow', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC02', 'Cinta delgada Escrow CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC15', 'Cinta delgada Escrow CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC03', 'Cinta gruesa con inicio transparente', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC04', 'Cinta gruesa de Escrow', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC05', 'Boquilla Superior de Escrow', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC06', 'Boquilla Inferior de Escrow', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC07', 'Guia Inferior de Escrow CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC08', 'Guia superior de Escrow CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC09', 'Tapa Transparente Escrow Negro', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC10', 'Tapa Transparente Escrow Gris', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC11', 'Banda dentada Escrow CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMESC14', 'Rodillo Escrow', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMDM01', 'Banda plana para rocker Dispenser Module', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMDM02', 'Eje con gomas para dispenser module CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMDM03', 'Goma para rocker Dispenser Module CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMDM04', 'Leva dentada Dispenser Module CCDM', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMDM05', 'Leva lisa (eje contra marcha) ', 'WINCOR NIXDORF');
+
+insert into piezas2 (codigo, descripcion, marca ) VALUES ('WCCDMDM06', 'Plastico de Rocker Dispenser Module', 'WINCOR NIXDORF');
+
+/* PIEZAS NCR */
+insert into piezas3 VALUES ('NPM01', 'Engrane Doble', 'NCR');
+insert into piezas3 VALUES ('NPM02', 'Engrane Grande', 'NCR');
+insert into piezas3 VALUES ('NPM03', 'Engrane Blanco', 'NCR');
+insert into piezas3 VALUES ('NPM04', 'Engrane Gris', 'NCR');
+insert into piezas3 VALUES ('NPM05', 'Engrane chico', 'NCR');
+insert into piezas3 VALUES ('NPM06', 'Engrane delgado', 'NCR');
+insert into piezas3 VALUES ('NPM07', 'Polea grande para banda (307)', 'NCR');
+insert into piezas3 VALUES ('NPM08', 'Chupetas', 'NCR');
+insert into piezas3 VALUES ('NPM09', 'Pick Line', 'NCR');
+insert into piezas3 VALUES ('NPM10', 'Seguros para pick line', 'NCR');
+insert into piezas3 VALUES ('NPM11', 'Bisel de plastico redondo', 'NCR');
+insert into piezas3 VALUES ('NPM12', 'Garrita', 'NCR');
+insert into piezas3 VALUES ('NPM13', 'Disco de tiempo', 'NCR');
+insert into piezas3 VALUES ('NPM14', 'Rodamiento buje (2 patitas)', 'NCR');
+insert into piezas3 VALUES ('NPM15', 'Rodamiento (buje)', 'NCR');
+insert into piezas3 VALUES ('NPM16', 'T para mangueras', 'NCR');
+insert into piezas3 VALUES ('NPM17', 'Electrovalvula', 'NCR');
+insert into piezas3 VALUES ('NPM18', 'Rueda negra para eje', 'NCR');
+insert into piezas3 VALUES ('NPM19', 'Media luna', 'NCR');
+insert into piezas3 VALUES ('NPM20', 'Bandas dentadas medianas', 'NCR');
+insert into piezas3 VALUES ('NPM21', 'Bandas cortas Dual Picker', 'NCR');
+insert into piezas3 VALUES ('NPM22', 'Banda dentada trasera pick module', 'NCR');
+insert into piezas3 VALUES ('NPM23', 'Filtro', 'NCR');
+insert into piezas3 VALUES ('NPM24', 'Seguros para tarjeta pick interface', 'NCR');
+insert into piezas3 VALUES ('NPM25', 'Seguro para tarjeta de herradura de sincronia', 'NCR');
+insert into piezas3 VALUES ('NPM26', 'Seguro chiquito', 'NCR');
+insert into piezas3 VALUES ('NPM27', 'Brazo de sujecion', 'NCR');
+insert into piezas3 VALUES ('NPM28', 'Polea chica para banda (307)', 'NCR');
+insert into piezas3 VALUES ('NPM29', 'Seguro de sujecion casetero', 'NCR');
+
+
+/* TRABAJOS */
+insert into trabajos values (87678,'HECTOR','MERINO','2021-05-04');
+
+insert into trabajos values (87679,'HECTOR','MERINO','2021-05-03');
+
+insert into trabajos values (87681,'HECTOR','MERINO','2021-05-02');
+
+insert into trabajos values (87682,'HECTOR','MERINO','2021-05-01');
+
+insert into trabajos values (87683,'HECTOR','MERINO','2021-04-30');
+
+insert into trabajos values (87684,'ALEXIS','CASTILLO','2020-04-29');
+
+insert into trabajos values (87685,'ALEXIS','CASTILLO','2020-04-28');
+
+insert into trabajos values (87686,'ALEXIS','CASTILLO','2020-04-27');
+
+insert into trabajos values (87687,'ALEXIS','CASTILLO','2020-04-36');
+
+
+insert into trabajos values (85601,'HECTOR','MERINO','2020-06-04');
+
+insert into trabajos values (85602,'HECTOR','MERINO','2020-06-03');
+
+insert into trabajos values (85603,'HECTOR','MERINO','2020-06-02');
+
+insert into trabajos values (85604,'HECTOR','MERINO','2020-06-01');
+
+insert into trabajos values (85605,'HECTOR','MERINO','2020-06-30');
+
+insert into trabajos values (85606,'ALEXIS','CASTILLO','2021-07-29');
+
+insert into trabajos values (85607,'ALEXIS','CASTILLO','2021-07-28');
+
+insert into trabajos values (85608,'ALEXIS','CASTILLO','2021-07-27');
+/* TRABAJOS NUEVOS */
+insert into trabajos values (85611,'ALEXIS','CASTILLO','2021-01-30');
+insert into trabajos values (85612,'ALEXIS','CASTILLO','2021-01-05');
+
+insert into trabajos values (85613,'ALEXIS','CASTILLO','2021-01-29');
+
+insert into trabajos values (85614,'ALEXIS','CASTILLO','2021-01-28');
+
+insert into trabajos values (85615,'ALEXIS','CASTILLO','2021-01-27');
+
+insert into trabajos values (85616,'ALEXIS','CASTILLO','2021-02-28');
+insert into trabajos values (85617,'ALEXIS','CASTILLO','2021-02-05');
+insert into trabajos values (85616,'ALEXIS','CASTILLO','2021-02-28');
+insert into trabajos values (85618,'ALEXIS','CASTILLO','2021-02-05');
+insert into trabajos values (85619,'HECTOR','MERINO','2021-03-04');
+
+insert into trabajos values (85620,'HECTOR','MERINO','2021-03-03');
+
+insert into trabajos values (85621,'HECTOR','MERINO','2021-03-02');
+
+insert into trabajos values (85622,'HECTOR','MERINO','2021-03-01');
+insert into trabajos values (85623,'ALEXIS','CASTILLO','2021-04-28');
+insert into trabajos values (85624,'ALEXIS','CASTILLO','2021-04-05');
+insert into trabajos values (85625,'ALEXIS','CASTILLO','2021-04-28');
+insert into trabajos values (85626,'ALEXIS','CASTILLO','2021-04-08');
+
+insert into trabajos values (85627,'ALEXIS','CASTILLO','2021-03-28');
+insert into trabajos values (85628,'ALEXIS','CASTILLO','2021-03-05');
+insert into trabajos values (85629,'ALEXIS','CASTILLO','2021-03-04');
+insert into trabajos values (85630,'ALEXIS','CASTILLO','2021-03-08');
